@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+.container{
+@apply w-[400px] h-[700px] flex flex-col items-center justify-between bg-[#141B28] rounded-2xl overflow-hidden
+}
