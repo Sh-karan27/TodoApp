@@ -8,7 +8,7 @@ const Status = () => {
         {StatusList.map((item, i) => (
           <div
             key={i}
-            className="bg-[#26304A]  flex items-center justify-center  gap-2  px-2 py-2 rounded-xl"
+            className=" cursor-pointer  bg-[#26304A]  flex items-center justify-center  gap-2  px-2 py-2 rounded-xl"
           >
             <div
               className="px-2 py-2 rounded-full"

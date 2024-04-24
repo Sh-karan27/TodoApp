@@ -1,21 +1,24 @@
-import React from 'react';
-
-import UserImg from '../assets/UserImg.jpg';
-import { CiSearch } from 'react-icons/ci';
+import React from "react";
+import { footerArray } from "../constants";
 const Footer = () => {
   return (
-    
-    <section className='bg-[#26304A] w-full  py-2 px-5  flex items-center justify-between'>
-      <div className='flex flex-col items-start justify-center gap-2 '>
-        <img src={UserImg} alt='userImg' className='w-10 rounded-full' />
-        <div className='flex flex-col items-start justify-center '>
-          <span className='text-sm text-white'>User Name</span>
-          <span className='text-sm text-gray-500'>
-            shuklakaran107@gmail.com
-          </span>
-        </div>
+    <section className=" relative  bg-[#26304A] w-full  py-3 px-5  flex items-center justify-center">
+      <div className="w-3/4 flex items-center justify-between ">
+        {footerArray.map((item, i) => (
+          <div key={i} className=" flex items-center justify-between">
+            <div
+              className={`${
+                item.name === "Add task"
+                  ? "text-4xl  text-[#26304A] font-light bg-white  rounded-full hover:bg-[#26304A] hover:text-white border "
+                  : " text-lg border  rounded-xl  text-white  hover:bg-white hover:text-[#26304A] "
+              } px-2 py-2 cursor-pointer transition-colors delay-300 ease-linear `}
+              title={item.name}
+            >
+              {item.icon}
+            </div>
+          </div>
+        ))}
       </div>
-      <CiSearch className=' text-xl text-white cursor-pointer' />
     </section>
   );
 };
