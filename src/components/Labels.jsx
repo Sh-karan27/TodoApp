@@ -1,16 +1,34 @@
-import React from "react";
+import React,{useState} from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { FaTag } from "react-icons/fa";
 
 const Labels = () => {
+
+  const [toggle, setToggle] = useState(true);
+
   return (
-    <section className="w-full   flex items-center justify-center py-5 px-5">
-      <div className="w-full h-full  flex flex-col items-center justify-center gap-5  px-2 py-2 rounded-xl ">
+    <section
+      className={`w-[90%] relative  ${
+        toggle ? "h-[50px]" : "h-[300px] "
+      }   flex items-center justify-center py-5 px-5 overflow-hidden`}
+    >
+      <div className="w-full h-full  flex flex-col items-center justify-start gap-5   rounded-xl ">
         <div className="w-full flex  items-center justify-between">
           <h1 className="text-[#219ebc]">Label</h1>
           <div className="flex items-center justify-center gap-1">
-            <IoIosArrowDown className="text-[#219ebc]" />
+            {toggle ? (
+              <IoIosArrowDown
+                className="text-[#219ebc] cursor-pointer"
+                onClick={() => setToggle(!toggle)}
+              />
+            ) : (
+              <IoIosArrowUp
+                className="text-[#219ebc] cursor-pointer"
+                onClick={() => setToggle(!toggle)}
+              />
+            )}
             <FaPlus className="text-[#219ebc]" />
           </div>
         </div>

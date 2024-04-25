@@ -5,11 +5,11 @@ import Labels from "./Labels";
 
 const Home = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2">
+    <section className="w-full h-full flex flex-col items-center justify-start gap-10  ">
       <Status />
       <Projects />
       <Labels />
-    </div>
+    </section>
   );
 };
 

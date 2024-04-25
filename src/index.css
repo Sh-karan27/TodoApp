@@ -11,3 +11,30 @@
 
 
 
+
+
+
+/* customScrollbar.css */
+
+/* Customizing scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    border-radius: 8px; /* Border radius of the scrollbar */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Color of the scrollbar track */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 8px; /* Border radius of the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+  }
+  
