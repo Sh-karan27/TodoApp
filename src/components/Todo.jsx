@@ -9,7 +9,7 @@ const Todo = () => {
   return (
     <section className="container ">
       <Header />
-      <div className="w-full h-full flex flex-col items-center justify-center gap-5">
+      <div className="w-full h-full flex flex-col items-center justify-center gap-2">
         <Status />
         <Projects />
         <Labels />
