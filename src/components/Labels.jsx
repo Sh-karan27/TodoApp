@@ -11,7 +11,7 @@ const Labels = () => {
   return (
     <section
       className={`w-[90%] relative  ${
-        toggle ? "h-[50px]" : "h-[300px] "
+        toggle ? "h-[50px]" : "h-[200px] "
       }   flex items-center justify-center py-5 px-5 overflow-hidden`}
     >
       <div className="w-full h-full  flex flex-col items-center justify-start gap-5   rounded-xl ">
@@ -33,7 +33,7 @@ const Labels = () => {
           </div>
         </div>
 
-        <div className=" w-full grid grid-cols-2 gap-5 ">
+        <div className=" w-full overflow-y-scroll   grid grid-cols-2 gap-5 ">
           <div className=" flex  items-center justify-between bg-[#26304A] px-1 py-1 rounded-md ">
             <div className=" flex items-center justify-center gap-1">
               <FaTag className="text-white" />
@@ -42,7 +42,31 @@ const Labels = () => {
             
           <div className="bg-white p-2 rounded-full"></div>
           </div>
-        </div>
+          <div className=" flex  items-center justify-between bg-[#26304A] px-1 py-1 rounded-md ">
+            <div className=" flex items-center justify-center gap-1">
+              <FaTag className="text-white" />
+              <h1 className="text-white">Sport</h1>
+            </div>
+            
+          <div className="bg-white p-2 rounded-full"></div>
+          </div>
+          <div className=" flex  items-center justify-between bg-[#26304A] px-1 py-1 rounded-md ">
+            <div className=" flex items-center justify-center gap-1">
+              <FaTag className="text-white" />
+              <h1 className="text-white">Sport</h1>
+            </div>
+            
+          <div className="bg-white p-2 rounded-full"></div>
+          </div>
+          <div className=" flex  items-center justify-between bg-[#26304A] px-1 py-1 rounded-md ">
+            <div className=" flex items-center justify-center gap-1">
+              <FaTag className="text-white" />
+              <h1 className="text-white">Sport</h1>
+            </div>
+            
+          <div className="bg-white p-2 rounded-full"></div>
+          </div>
+                  </div>
       </div>
     </section>
   );
