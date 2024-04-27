@@ -54,19 +54,21 @@ export default function AlertDialog() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        
       >
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle id="alert-dialog-title" className='text-blue-500'>
           {"Add Project in Sh_Todo"}
         </DialogTitle>
-        <DialogContent>
+        <DialogContent >
           <DialogContentText id="alert-dialog-description">
           <input
             type="text"
             placeholder="Add project"
             onChange={handleOnChange}
             value={textInput}
+            className=' outline-none'
           />
-          <button onClick={addProjectText}>Add</button>
+          <button onClick={addProjectText} className='text-blue-500 cursor-pointer'>Add</button>
         
           </DialogContentText>
         </DialogContent>

@@ -19,13 +19,13 @@ const dispatch = useDispatch()
   return (
     <section
       className={`w-[90%] relative  ${
-        toggle ? "h-[50px]" : " "
+        toggle? "h-[50px]" : " "
       }   flex items-center justify-center py-5 px-5 overflow-hidden`}
     >
       <div className="w-full h-full   flex flex-col items-center justify-start gap-5 rounded-xl ">
         <div className="w-full flex  items-center justify-between">
           <h1 className="text-[#219ebc]">Project</h1>
-          <div className="flex items-center justify-center gap-1">
+          <div className="flex items-center justify-center gap-2">
             {toggle ? (
               <IoIosArrowDown
                 className="text-[#219ebc] cursor-pointer"
@@ -37,6 +37,7 @@ const dispatch = useDispatch()
                 onClick={() => setToggle(!toggle)}
               />
             )}
+            <div className="bg-[#26304A] text-[#219ebc] px-2   rounded-full">{data.length}</div>
           </div>
         </div>
 
@@ -50,7 +51,7 @@ const dispatch = useDispatch()
                 className="w-full flex  items-center justify-between bg-[#26304A] px-1 py-1 rounded-md "
               >
                 <h1 className="text-white">{project.text}</h1>
-                <IoIosTrash className="text-red-500 text-2xl hover:cursor-pointer hover:text-blue-500" onClick={deleteProjectText(id)}/>
+                <IoIosTrash className="text-red-500 text-2xl hover:cursor-pointer hover:text-blue-500" onClick={()=>deleteProjectText(project.id)}/>
 
               </div>
             );
