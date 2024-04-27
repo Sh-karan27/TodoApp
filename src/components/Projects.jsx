@@ -43,7 +43,7 @@ const dispatch = useDispatch()
 
         <AlertDialog />
 
-        <div className="w-full h-[150px]  flex flex-col items-center justify-start gap-5 overflow-y-scroll ">
+        <div className={`w-full ${data.length===0?"":"h-[150px]"}  flex flex-col items-center justify-start gap-5 overflow-y-scroll `}>
           {data.map((project, id) => {
             return (
               <div
